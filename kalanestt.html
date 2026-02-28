@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KalaNest | Handmade Ceramics & Decor</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', Arial, sans-serif; }
+    body { background: #fffaf5; }
+
+    /* Top Credit Bar */
+    .credit-bar {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #4a2c2a;
+      text-align: center;
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #b45f06;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+
+    nav a:hover { color: #b45f06; }
+
+    .header-icons {
+      display: flex;
+      gap: 15px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(120deg, #f6d365, #fda085);
+      padding: 70px 20px;
+      text-align: center;
+      color: #4a2c2a;
+    }
+
+    .hero h1 { font-size: 42px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; }
+
+    /* Categories */
+    .categories {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .categories h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4a2c2a;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .category-card:hover { transform: translateY(-8px); }
+
+    .category-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .category-card h3 {
+      text-align: center;
+      padding: 15px;
+      color: #b45f06;
+    }
+
+    /* Support Section */
+    .support {
+      background: linear-gradient(to right, #cfd9df, #e2ebf0);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .support h2 { margin-bottom: 10px; }
+
+    /* Login Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 320px;
+      text-align: center;
+    }
+
+    .modal-content h2 { margin-bottom: 15px; }
+
+    .modal-content input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .modal-content button {
+      width: 100%;
+      padding: 10px;
+      background: #b45f06;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .close {
+      float: right;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    footer {
+      background: #2f2f2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .logo-img {
+  height: 120px;      /* change this value */
+  width: auto;       /* keeps image proportion */
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="credit-bar">
+    Proudly supporting & crediting the skilled artisans of <b>Banjara Community</b> 🌸
+  </div>
+
+  <header>
+    <div class="logo-area">
+      <!-- ADD YOUR LOGO IMAGE HERE -->
+      <img src="logo.png" alt="KalaNest" class="logo-img">
+      
+
+     
+    </div>
+
+    
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Gifting</a>
+      <a href="#">Customized</a>
+      <a href="#">Ceramic Mugs</a>
+      <a href="#">Home Decor</a>
+      <a href="#">Kitchen Items</a>
+      <a href="#">Support</a>
+    </nav>
+    <div class="header-icons">
+      <span onclick="openLogin()">👤</span>
+      <span>🛒</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Handcrafted with Love ✨</h1>
+    <p>Aesthetic ceramics, decor & kitchen essentials made by local artisans</p>
+  </section>
+
+  <section class="categories">
+    <h2>Explore Our Collections</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://prestigehaus.com/media/magefan_blog/unique-wooden-gifts.png" />
+        <h3>Gifting Items</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://indiaeatmania.in/wp-content/uploads/2021/06/Untitled-2fdds34544-1024x576.jpg" />
+        <h3>Customized Items</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://i.pinimg.com/1200x/f9/80/8f/f9808f69d86b5ef711dc797d8c869446.jpg" />
+        <h3>Ceramic Mugs</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://indiaeatmania.in/wp-content/uploads/2021/06/Untitled-2dffd44553.jpg" />
+        <h3>Home Decor</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://i.pinimg.com/736x/b8/d9/96/b8d9969c927507b12d179e17f692b579.jpg" />
+        <h3>Kitchen Items</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="support">
+    <h2>Need Help?</h2>
+    <p>Email: kalanest.0@gmail.com | Phone: +91 8306399276</p>
+  </section>
+
+  <footer>
+    © 2026 KalaNest | Handmade • Sustainable • Local
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLogin()">✖</span>
+      <h2>Login</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+    </div>
+  </div>
+
+  <script>
+    function openLogin() {
+      document.getElementById('loginModal').style.display = 'flex';
+    }
+    function closeLogin() {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
